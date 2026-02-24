@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "description": "Buy groceries",
+    "status": "done",
+    "createdAt": "2026-02-24T18:19:27.0397688+05:30",
+    "updatedAt": "2026-02-24T18:19:37.8897012+05:30"
+  },
+  {
+    "id": 2,
+    "description": "Finish project",
+    "status": "todo",
+    "createdAt": "2026-02-24T18:19:37.5163256+05:30",
+    "updatedAt": "2026-02-24T18:19:37.5163256+05:30"
+  },
+  {
+    "id": 3,
+    "description": "rich",
+    "status": "todo",
+    "createdAt": "2026-02-24T18:20:36.7452062+05:30",
+    "updatedAt": "2026-02-24T18:20:36.7452062+05:30"
+  },
+  {
+    "id": 4,
+    "description": "Test task",
+    "status": "todo",
+    "createdAt": "2026-02-24T18:20:58.7319411+05:30",
+    "updatedAt": "2026-02-24T18:20:58.7319411+05:30"
+  }
+]
