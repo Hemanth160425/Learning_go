@@ -1,39 +1,48 @@
-﻿package main
+package main
 
 import (
-"encoding/json"
-"os"
+	"encoding/json"
+	"os"
 )
+
 
 const fileName = "expenses.json"
 
 func loadExpenses() ([]Expense, error) {
 
-file, err := os.ReadFile(fileName)
+	file, err := os.ReadFile(fileName)
 
-if err != nil {
+	if err != nil {
 
-if os.IsNotExist(err) {
-return []Expense{}, nil
-}
+		if os.IsNotExist(err) {
+			return []Expense{}, nil
+		}
 
-return nil, err
-}
+		return nil, err
+	}
 
-var expenses []Expense
+	var expenses []Expense
 
-err = json.Unmarshal(file, &expenses)
+	err = json.Unmarshal(file, &expenses)
 
-return expenses, err
+	return expenses, err
 }
 
 func saveExpenses(expenses []Expense) error {
 
-data, err := json.MarshalIndent(expenses, "", " ")
+	data, err := json.MarshalIndent(expenses, "", " ")
 
-if err != nil {
-return err
+	if err != nil {
+		return err
+	}
+
+	return os.WriteFile(fileName, data, 0644)
 }
 
-return os.WriteFile(fileName, data, 0644)
-}
+
+
+
+
+
+
+
